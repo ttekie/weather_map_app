@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Map</title>
+    <script src="js/keys.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="js/mapbox-geocoder-utils.js"></script>
+
+    <script src="js/jquery-3.6.1.js"></script>
+    <script src="js/weather_map.js"></script>
+    <link rel="stylesheet" href="css/weather_map.css">
+</head>
+<body>
+<header class="nav-wrapper">
+    <nav class="nav-bar wrapper">
+        <ul class="">
+            <li id="weather-logo" class="#">Weather App</li>
+            <li>
+                <label for="inputValue">Place Search</label>
+                <input type="text" id="inputValue" class="city-forecast py-1 rounded border border-1 outline-0">
+                <button id="searchButton" class="px-3 py-1 border border-1 rounded">Find</button>
+            </li>
+            <li id="city-name" class="#">current city</li>
+        </ul>
+    </nav>
+</header>
+<main id="main-container" class="wrapper mb-5">
+    <!-- append all the forecast card here -->
+    <div id="forecast-card" class="my-5"></div>
+    <div class="mx-auto">
+        <div id='map' class="mx-auto mt-4"></div>
+    </div>
+</main>
+</body>
+</html>
